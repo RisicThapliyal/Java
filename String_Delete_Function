@@ -1,0 +1,22 @@
+package JAVA;
+import java.util.*;
+class String_Delete_Function {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the String value : ");
+        String str1 = sc.nextLine();
+        StringBuilder str2 = new StringBuilder(str1);
+        int pointer = 0;
+
+        for(int i = 0; i < str2.length(); i++){
+            if(str2.charAt(i) == 'T'){
+                pointer = i;
+                break;
+            }
+        }
+            str2.delete(pointer, str2.length());
+            System.out.println(str2);
+
+    }
+}

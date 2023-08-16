@@ -1,0 +1,32 @@
+package JAVA;
+import java.util.*;
+public class Functions {
+    public static void main(String[] args) {
+        int pv = 0;
+        int nv = 0;
+        int z  = 0;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the size of an array");
+        int user = sc.nextInt();
+
+        System.out.println("Enter the array elements");
+        int[] array = new int[user];
+        for (int i = 0; i < user; i++){
+            array[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < user; i++) {
+            if (array[i] > 0) {
+                pv++;
+            } else if (array[i] < 0) {
+                nv++;
+            } else {
+                z++;
+            }
+        }
+            System.out.println("Positive numbers are : " + pv);
+            System.out.println("Negative numbers are : " + nv);
+            System.out.println("Zeros are : " + z);
+        }
+    }
